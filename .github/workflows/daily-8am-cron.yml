@@ -1,0 +1,21 @@
+
+name: Daily 8 AM Workflow
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  daily-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print welcome message
+        run: echo "Daily 8 AM GitHub Actions workflow is running!"
+
+      - name: Print date and time
+        run: date
+
+      - name: Print working directory
+        run: pwd
